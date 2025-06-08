@@ -31,6 +31,12 @@ const userSchema = new mongoose.Schema({
             ref: "Blog",
         },
     ],
+    booking: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Booking",
+        },
+    ]
 }, { timestamps: true });
 
 userSchema.pre("save", async (next)=> {
